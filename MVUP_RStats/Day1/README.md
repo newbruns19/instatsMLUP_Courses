@@ -3,7 +3,7 @@
 Gabriel Rodrigues Palma introduced a Python basics course aimed at machine vision, covering foundational concepts in Python. He emphasised using Google Colab for coding and referenced the book "Learning Python" by Mark Lutz. The course will cover variables, data types, and decision-making in code using if-elif-else structures and loops. Practical examples included insect classification, habitat suitability analysis, and data collection. Gabriel highlighted the importance of logical operators, debugging techniques, and break and continue statements in loops. The session concluded with a summary and a reminder of the afternoon session's focus on Python applications. Here is a 15 minutes summary of the content covered this morning:
 
 <audio controls>
-  <source src="https://GabrielRPalma.github.io/Courses/MVUP_RStats/Day1/audioSummaries/MorningSessionReview.wav" type="audio/mpeg">
+  <source src="audioSummaries/MorningSessionReview.wav" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
