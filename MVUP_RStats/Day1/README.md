@@ -3,7 +3,7 @@
 Gabriel Rodrigues Palma introduced a Python basics course aimed at machine vision, covering foundational concepts in Python. He emphasised using Google Colab for coding and referenced the book "Learning Python" by Mark Lutz. The course will cover variables, data types, and decision-making in code using if-elif-else structures and loops. Practical examples included insect classification, habitat suitability analysis, and data collection. Gabriel highlighted the importance of logical operators, debugging techniques, and break and continue statements in loops. The session concluded with a summary and a reminder of the afternoon session's focus on Python applications. Here is a 15 minutes summary of the content covered this morning:
 
 <audio controls>
-  <source src="https://GabrielRPalma.github.io/Courses/MVUP_RStats/Day1/MorningSessionReview.wav" type="audio/mpeg">
+  <source src="https://GabrielRPalma.github.io/Courses/MVUP_RStats/Day1/audioSummaries/MorningSessionReview.wav" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -25,7 +25,8 @@ Citations:
 - [5] https://www.youtube.com/watch?v=SuzwJ28mby4
 - [7] https://www.youtube.com/watch?v=Xi9-W26cDBs
 
-# Outline
+# Outline 
+The summary was generated using the live transcription of the morning sessions' content with the help of [Otter.ai](https://otter.ai/).
 
 ## Introduction to Python Basics Course
 - Gabriel Rodrigues Palma introduces the Python basics course, emphasising its importance in machine vision using Python.
@@ -35,7 +36,7 @@ Citations:
 
 ## Using Google Colab and Recommended Books
 - Gabriel explains the benefits of using Google Colab, including using different GPUs and avoiding pre-installations.
-The course will focus on Mark Lutz's book "Learning Python," which Gabriel considers the Bible of Python learning.
+The course will focus on Mark Lutz's book "Learning Python".
 - Gabriel highlights the importance of having a comprehensive book like "Learning Python" for reference and consultation.
 - The course will use a combination of code in presentations and hands-on applications in Google Colab.
 
