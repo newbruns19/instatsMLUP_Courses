@@ -335,7 +335,7 @@ model <- rpart(high_yield ~ soil_moisture + rainfall,
                method = "class")
 
 # Visualize the partitioning
-rpart.plot(model, type = 4, extra = 106)
+rpart.plot(model, type = 4)
 
 # 6. Predict on test data and compute metrics
 dt_results <- predict(model, agri_data[-train_indices, ], type = "class")
@@ -392,7 +392,7 @@ model <- rpart(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width
                method = "class")
 
 # Visualize the partitioning
-rpart.plot(model, type = 4, extra = 104)
+rpart.plot(model, type = 4)
 
 # 6. Predict on test data and compute metrics
 dt_results <- predict(model, iris[-train_indices, ], type = "class")
