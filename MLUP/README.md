@@ -1,4 +1,4 @@
-# Machine Vision using Python (MVUP01)
+# Machine Learning using Python (MVUP01)
 This course comprehensively introduces Machine Learning, covering theoretical foundations and practical applications. It focuses on crucial machine learning techniques such as supervised and unsupervised learning algorithms, using Python and popular libraries like Scikit-learn, TensorFlow, and Keras. The course emphasises hands-on projects to apply learned concepts to real-world ecological problems. By the end of the course, participants should:
 
 - Understand fundamental concepts in machine learning, including supervised and unsupervised learning.
