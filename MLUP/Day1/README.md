@@ -2,7 +2,7 @@
 
 Gabriel Rodrigues Palma introduced a Python basics course aimed at machine learning, covering foundational concepts in Python. He emphasised using Google Colab for coding and referenced the book "Learning Python" by Mark Lutz. The course will cover variables, data types, and decision-making in code using if-elif-else structures and loops. Practical examples included insect classification, habitat suitability analysis, and data collection. Gabriel highlighted the importance of logical operators, debugging techniques, and break and continue statements in loops. The session concluded with a summary and a reminder of the afternoon session's focus on Python applications. Here is a 8 minutes summary of the content covered this day:
 
-[🔊 Play Morning Session Review](https://notebooklm.google.com/notebook/1c58e275-084f-45e1-a47f-33056922f12d/audio)
+[🔊 Play Session Review](https://notebooklm.google.com/notebook/1c58e275-084f-45e1-a47f-33056922f12d/audio)
 
 The audio was created using [Notebooklm](https://notebooklm.google.com)
 

@@ -2,7 +2,7 @@
 
 Gabriel Rodrigues Palma discussed the fundamentals of machine learning, emphasising practical applications and theoretical foundations. He shared his journey starting in 2017, focusing on vegetational type classification in Brazil. Key concepts included supervised learning, unsupervised learning, reinforcement learning, and semi-supervised learning. Gabriel demonstrated Python libraries like NumPy, Pandas, Sklearn, Matplotlib, and Seaborn, highlighting their use in data manipulation, classification, and visualization. He explained metrics such as accuracy, precision, recall, and F1 scores, and used examples like pollinator activity and soil quality classification to illustrate machine learning principles and algorithms:
 
-[🔊 Play Morning Session Review](https://notebooklm.google.com/notebook/27f5f15c-3d78-4343-9bd7-ff72f80a3c41/audio)
+[🔊 Play Session Review](https://notebooklm.google.com/notebook/27f5f15c-3d78-4343-9bd7-ff72f80a3c41/audio)
 
 The audio was created using [Notebooklm](https://notebooklm.google.com)
 

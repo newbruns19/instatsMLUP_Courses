@@ -2,7 +2,7 @@
 
 Gabriel Rodrigues Palma led a Python workshop focusing on clean code principles. He emphasized the importance of writing code that is easy to understand and maintain over time, using examples to illustrate clear variable naming, comments, and logical organization. He discussed Python data structures like lists, dictionaries, and sets, highlighting their functionalities and methods. Palma also covered error handling using try and except blocks and the benefits of using functions and classes for code organization and sharing information. He stressed the significance of readability, simplicity, and practicality in coding practices:
 
-[🔊 Play Morning Session Review](https://notebooklm.google.com/notebook/6ecf1b63-ca7e-4733-bffa-5c7703141ae2/audio)
+[🔊 Play Session Review](https://notebooklm.google.com/notebook/6ecf1b63-ca7e-4733-bffa-5c7703141ae2/audio)
 
 The audio was created using [Notebooklm](https://notebooklm.google.com)
 
