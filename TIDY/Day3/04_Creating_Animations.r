@@ -673,17 +673,3 @@ envelope_points_subset <- envelope_points %>%
 # Use transition_states(year) to show changes over time.
 
 # Your code here:
-
-
-# Animated Species Population Growth
-species_data <- data.frame(
-  year = rep(2010:2015, 3),
-  species = rep(c("Oak", "Maple", "Birch"), each = 6),
-  population = c(1000:1005, 800:805, 600:605)
-)
-p <- ggplot(species_data, aes(x = year, y = population, color = species)) +
-  geom_line() + geom_point() +
-  transition_reveal(year)
-anim <- animate(p)
-anim
-anim_save("my_animation.gif", anim)
