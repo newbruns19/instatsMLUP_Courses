@@ -12,7 +12,33 @@ source('00_source.r')
 ################################################################################
 ############################ Tidymodels Basics ##############################
 ################################################################################
+urchins <-
+  # Data were assembled for a tutorial 
+  # at https://www.flutterbys.com.au/stats/tut/tut7.5a.html
+  read_csv("https://tidymodels.org/start/models/urchins.csv") %>% 
+  # Change the names to be a little more verbose
+  setNames(c("food_regime", "initial_volume", "width")) %>% 
+  # Factors are very helpful for modeling, so we convert one column
+  mutate(food_regime = factor(food_regime, levels = c("Initial", "Low", "High")))
+colnames(urchins)
 
+linear_reg() %>%
+  fit(width ~ initial_volume * food_regime, data = urchins)
+
+fit <- lm(width ~ initial_volume * food_regime, data = urchins)
+fit_simpler <- lm(width ~ initial_volume + food_regime, data = urchins)
+anova(fit_simpler, fit, test = 'F')
+
+
+
+#> Rows: 72 Columns: 3
+#> ── Column specification ──────────────────────────────────────────────
+#> Delimiter: ","
+#> chr (1): TREAT
+#> dbl (2): IV, SUTW
+#> 
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 # Load simulated bird abundance data
 bird_data <- tibble(
   site_id = 1:100,
@@ -23,7 +49,7 @@ bird_data <- tibble(
   bird_abundance = rpois(100, 20)
 )
 glimpse(bird_data)
-
+as_tibble(bird_data)
 # Example 2: Creating data splits for ecological modeling
 set.seed(123)
 bird_split <- initial_split(bird_data, prop = 0.8, strata = habitat_type)
@@ -148,17 +174,6 @@ species_data <- tibble(
 
 # Exercise 5: Cross-Validation for Species Richness Analysis
 
-
-# Create a species richness dataset
-set.seed(456)
-richness_data <- tibble(
-  transect_id = 1:100,
-  canopy_cover = runif(100, 0, 100),
-  soil_ph = rnorm(100, mean = 6.5, sd = 1),
-  distance_water = rexp(100, rate = 0.01),
-  land_use = sample(c("natural", "agriculture", "urban"), 100, replace = TRUE),
-  species_richness = pmax(0, round(
-    10 + 0.2 * canopy_
     
 
 ################################################################################
@@ -188,6 +203,10 @@ bird_data <- tibble(
   habitat_type = habitat_type,
   elev = elev
 )
+n_samples <- nrow(bird_data)
+indices <- sample(x = 1:n_samples, size = n_samples * 0.2)
+training_set <- bird_data[indices, ]
+testing_set <- bird_data[-indices, ]
 
 # Create a data split
 bird_split <- initial_split(bird_data, strata = habitat_type)
@@ -195,7 +214,7 @@ bird_train <- training(bird_split)
 bird_test <- testing(bird_split)
 
 # Example 1: Cross-validation folds (stratified if habitat_type exists)
-bird_folds <- vfold_cv(bird_train, v = 5, strata = habitat_type)
+bird_folds <- vfold_cv(bird_train, v = 3, strata = habitat_type)
 print(bird_folds)
 
 # Example 2: Define recipe, model, and workflow for predictions
@@ -256,28 +275,4 @@ forest_data <- tibble(
 
 
 # Exercise 3: Model diagnostics for ecological data
-# Check residuals and model assumptions
-
-species_data <- data.frame(height = c(1.5, 2.1, 1.8), abundance = c(15, 23, 18))
-model_spec <- linear_reg() %>% set_engine("lm")
-print(model_spec)
-
-
-set.seed(123)
-data_split <- initial_split(species_data, prop = 0.8)
-train_data <- training(data_split)
-cat("Training size:", nrow(train_data))
-
-eco_recipe <- recipe(abundance ~ height, data = species_data) %>%
-  step_normalize(all_numeric_predictors())
-print(eco_recipe)
-
-eco_wf <- workflow() %>%
-  add_recipe(eco_recipe) %>%
-  add_model(model_spec)
-fit_result <- fit(eco_wf, species_data)
-class(fit_result)
-
-set.seed(456)
-cv_folds <- vfold_cv(species_data, v = 2)
-print(cv_folds)
+# Check residuals

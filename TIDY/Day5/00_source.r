@@ -10,13 +10,8 @@
 # packages required ---------------------------
 packages <- c('tidyverse', 
               'tidymodels', 
-              'poissonreg', 
-              'mgcv', 
-              'kernlab', 
-              'palmerpenguins', 
-              'themis', 
-              'brulee', 
-              'tune')
+              'xgboost', 
+              'sf')
 install.packages(setdiff(packages, rownames(installed.packages())))
 lapply(packages, library, character.only = TRUE)
 
